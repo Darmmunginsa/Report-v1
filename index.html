@@ -2,7 +2,7 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8">
-  <title>Dongroups PM Report</title>
+  <title>UPS Preventive Maintenance Report</title>
   <style>
     @page {
       size: A4;
@@ -19,29 +19,40 @@
       width: 210mm;
       height: 297mm;
     }
+
     h1 {
       text-align: center;
       font-size: 18px;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
+
     .header {
       display: flex;
       justify-content: space-between;
       margin-bottom: 10px;
     }
-    .logo-box, .address-box {
+
+    .logo-box {
       width: 45%;
     }
+
+    .address-box {
+      width: 45%;
+      text-align: right;
+    }
+
     table {
       width: 100%;
       border-collapse: collapse;
       margin: 8px 0;
     }
-    td, th {
+
+    th, td {
       border: 1px solid #ccc;
       padding: 6px;
       vertical-align: top;
     }
+
     .section-title {
       font-weight: bold;
       margin-top: 12px;
@@ -49,22 +60,31 @@
       border-bottom: 1px solid #888;
       padding-bottom: 2px;
     }
-    .no-border td {
-      border: none;
-      padding: 4px 0;
+
+    .checkbox {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      border: 2px solid #999;
+      margin-right: 6px;
+      vertical-align: middle;
     }
-    .flex-row {
+
+    .row-flex {
       display: flex;
       justify-content: space-between;
-      margin-top: 20px;
+      margin-top: 25px;
     }
-    .sign-box {
+
+    .signature-box {
       width: 45%;
       text-align: center;
     }
+
     .comment-box {
-      border: 1px solid #ccc;
       height: 60px;
+      border: 1px solid #ccc;
       margin-top: 10px;
     }
   </style>
@@ -73,36 +93,25 @@
 
   <div class="header">
     <div class="logo-box">
-      <!-- ใส่โลโก้ที่นี่ -->
+      <!-- 🔻 เพิ่มโลโก้ที่นี่ -->
       <strong>Company Logo</strong>
     </div>
-    <div class="address-box" style="text-align:right">
-      <!-- ใส่ที่อยู่บริษัทที่นี่ -->
+    <div class="address-box">
+      <!-- 🔻 เพิ่มที่อยู่ที่นี่ -->
       <strong>Company Name</strong><br>
       Company Address Line 1<br>
       Company Address Line 2
     </div>
   </div>
 
-  <h1>UPS Preventive Maintenance Form</h1>
+  <h1>UPS Preventive Maintenance Report</h1>
 
-  <table class="no-border">
-    <tr>
-      <td style="width: 15%;">No.</td>
-      <td style="width: 35%;"></td>
-      <td style="width: 10%;">Date</td>
-      <td style="width: 40%;"></td>
-    </tr>
-    <tr>
-      <td>Time</td>
-      <td></td>
-      <td>To</td>
-      <td></td>
-    </tr>
+  <table>
+    <tr><td>No.</td><td></td><td>Date</td><td></td></tr>
+    <tr><td>Time</td><td></td><td>To</td><td></td></tr>
   </table>
 
   <table>
-    <tr><th colspan="4">Customer Information</th></tr>
     <tr>
       <td>Customer Name</td><td></td>
       <td>Brand</td><td></td>
@@ -126,24 +135,30 @@
 
   <div class="section-title">1. Safety Checklist</div>
   <table>
-    <tr><td>(1)</td><td>Use of Personal Protective Equipment (PPE)</td></tr>
-    <tr><td>(2)</td><td>Identify & assess risks in the workplace</td></tr>
-    <tr><td colspan="2">I certify that the above checks have been carried out before commencing work</td></tr>
+    <tr>
+      <td>(1)</td><td><span class="checkbox"></span> Use of Personal Protective Equipment (PPE)</td>
+    </tr>
+    <tr>
+      <td>(2)</td><td><span class="checkbox"></span> Identify & assess risks in the workplace</td>
+    </tr>
+    <tr>
+      <td colspan="2">I certify that the above checks have been carried out before commencing work</td>
+    </tr>
   </table>
 
   <div class="section-title">2. Input Section</div>
   <table>
-    <tr><td>UPS Status</td><td>Normal</td><td>Abnormal</td></tr>
-    <tr><td>Input Voltage</td><td>Normal</td><td>Abnormal</td></tr>
-    <tr><td>Input Current</td><td>Normal</td><td>Abnormal</td></tr>
+    <tr><td>UPS Status</td><td><span class="checkbox"></span> Normal <span class="checkbox"></span> Abnormal</td></tr>
+    <tr><td>Input Voltage</td><td><span class="checkbox"></span> Normal <span class="checkbox"></span> Abnormal</td></tr>
+    <tr><td>Input Current</td><td><span class="checkbox"></span> Normal <span class="checkbox"></span> Abnormal</td></tr>
   </table>
 
   <div class="section-title">3. Output Section</div>
   <table>
-    <tr><td>Output Voltage</td><td>Normal</td><td>Abnormal</td></tr>
-    <tr><td>Output Current</td><td>Normal</td><td>Abnormal</td></tr>
-    <tr><td>Percent Load</td><td>Normal</td><td>Abnormal</td></tr>
-    <tr><td>Output Frequency</td><td>Normal</td><td>Abnormal</td></tr>
+    <tr><td>Output Voltage</td><td><span class="checkbox"></span> Normal <span class="checkbox"></span> Abnormal</td></tr>
+    <tr><td>Output Current</td><td><span class="checkbox"></span> Normal <span class="checkbox"></span> Abnormal</td></tr>
+    <tr><td>Percent Load</td><td><span class="checkbox"></span> Normal <span class="checkbox"></span> Abnormal</td></tr>
+    <tr><td>Output Frequency</td><td><span class="checkbox"></span> Normal <span class="checkbox"></span> Abnormal</td></tr>
   </table>
 
   <div class="section-title">4. Battery Section</div>
@@ -154,10 +169,10 @@
     <tr><td>Blocks Installed Date</td><td></td></tr>
     <tr><td>Volt / Ah</td><td></td></tr>
     <tr><td>No. of String</td><td></td></tr>
-    <tr><td>Charging Mode</td><td>Float / Boost</td></tr>
-    <tr><td>Charger Voltage</td><td>Normal / Abnormal</td></tr>
-    <tr><td>Battery Voltage</td><td>Normal / Abnormal</td></tr>
-    <tr><td>Battery Room Temp</td><td>Normal / Abnormal</td></tr>
+    <tr><td>Charging Mode</td><td><span class="checkbox"></span> Float <span class="checkbox"></span> Boost</td></tr>
+    <tr><td>Charger Voltage</td><td><span class="checkbox"></span> Normal <span class="checkbox"></span> Abnormal</td></tr>
+    <tr><td>Battery Voltage</td><td><span class="checkbox"></span> Normal <span class="checkbox"></span> Abnormal</td></tr>
+    <tr><td>Battery Room Temp</td><td><span class="checkbox"></span> Normal <span class="checkbox"></span> Abnormal</td></tr>
   </table>
 
   <div class="section-title">5. Backup Test</div>
@@ -165,30 +180,26 @@
     <tr><td>Back Up Time (min)</td><td></td></tr>
     <tr><td>Volt DC 1</td><td></td></tr>
     <tr><td>Volt DC 2</td><td></td></tr>
-    <tr><td>Back Up Test</td><td>Normal / Abnormal</td></tr>
+    <tr><td>Back Up Test</td><td><span class="checkbox"></span> Normal <span class="checkbox"></span> Abnormal</td></tr>
   </table>
 
   <div class="section-title">6. Environment Condition</div>
   <table>
-    <tr><td>Ventilation for UPS</td><td>Normal / Abnormal</td></tr>
-    <tr><td>Air Condition</td><td>Dusty / Humid</td></tr>
-    <tr><td>Ambient Temp</td><td>Normal / Abnormal</td></tr>
-    <tr><td>UPS Temp</td><td>Normal / Abnormal</td></tr>
+    <tr><td>Ventilation for UPS</td><td><span class="checkbox"></span> Normal <span class="checkbox"></span> Abnormal</td></tr>
+    <tr><td>Air Condition</td><td><span class="checkbox"></span> Dusty <span class="checkbox"></span> Humid</td></tr>
+    <tr><td>Ambient Temp</td><td><span class="checkbox"></span> Normal <span class="checkbox"></span> Abnormal</td></tr>
+    <tr><td>UPS Temp</td><td><span class="checkbox"></span> Normal <span class="checkbox"></span> Abnormal</td></tr>
   </table>
 
   <div class="section-title">7. Comment</div>
   <div class="comment-box"></div>
 
-  <div class="flex-row">
-    <div class="sign-box">
-      <p><strong>Engineer</strong></p>
-      <br><br>
-      ____________________________
+  <div class="row-flex">
+    <div class="signature-box">
+      <p><strong>Engineer</strong></p><br><br>__________________________
     </div>
-    <div class="sign-box">
-      <p><strong>Customer Acknowledgment</strong></p>
-      <br><br>
-      ____________________________
+    <div class="signature-box">
+      <p><strong>Customer Acknowledgment</strong></p><br><br>__________________________
     </div>
   </div>
 
