@@ -4,151 +4,200 @@
   <meta charset="UTF-8">
   <title>UPS Preventive Maintenance Form</title>
   <style>
-    @page { size: A4; margin: 10mm; }
     body {
-      font-family: 'Segoe UI', sans-serif;
-      font-size: 12px;
-      margin: 0;
-      padding: 10mm;
-      width: 210mm;
-      height: 297mm;
-      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      margin: 20px;
     }
+
+    h1 {
+      text-align: center;
+      font-size: 22px;
+    }
+
+    .section {
+      margin-bottom: 20px;
+    }
+
     table {
-      border-collapse: collapse;
       width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
     }
-    td, th {
+
+    th, td {
       border: 1px solid #000;
-      padding: 2px 4px;
-      vertical-align: top;
+      padding: 6px;
+      text-align: left;
     }
-    .no-border td {
-      border: none;
-    }
-    .header, .footer {
-      text-align: center;
-      font-weight: bold;
-    }
-    .checkbox {
+
+    label {
       display: inline-block;
-      width: 12px;
-      height: 12px;
+      margin: 5px 0;
+    }
+
+    .checkbox-round input[type="checkbox"] {
+      appearance: none;
+      -webkit-appearance: none;
+      background-color: #fff;
+      border: 2px solid #000;
       border-radius: 50%;
-      border: 1.5px solid #000;
-      margin-right: 4px;
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+      position: relative;
+      margin-right: 8px;
     }
-    .section-title {
-      background-color: #f0f0f0;
-      text-align: center;
-      font-weight: bold;
+
+    .checkbox-round input[type="checkbox"]:checked::before {
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: #000;
     }
-    .comment-box {
-      border: 1px solid #000;
-      height: 50px;
-      margin-top: 4px;
-    }
+
     .signature {
-      padding-top: 20px;
-      text-align: center;
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-between;
     }
-    .small { font-size: 10px; }
+
+    .signature div {
+      width: 48%;
+    }
+
+    .input-box {
+      border-bottom: 1px solid #000;
+      display: inline-block;
+      width: 200px;
+    }
   </style>
 </head>
 <body>
 
-  <table class="no-border">
-    <tr>
-      <td style="width: 30%; color: red;">Logo</td>
-      <td style="width: 40%; text-align: center; color: red;">Company Address</td>
-      <td style="width: 30%;">
-        No: ..................<br>
-        Date: ...............<br>
-        Time: ....... To: .......
-      </td>
-    </tr>
-  </table>
+  <h1>UPS Preventive Maintenance Form</h1>
 
-  <div class="header">UPS Preventive Maintenance Form</div>
+  <div class="section">
+    <strong>Customer Name:</strong> <span class="input-box"></span><br>
+    <strong>Model:</strong> <span class="input-box"></span> &nbsp;&nbsp;
+    <strong>Brand:</strong> <span class="input-box"></span><br>
+    <strong>Tel:</strong> <span class="input-box"></span> &nbsp;&nbsp;
+    <strong>Fax:</strong> <span class="input-box"></span><br>
+    <strong>Unit No.:</strong> <span class="input-box"></span> &nbsp;&nbsp;
+    <strong>Serial No.:</strong> <span class="input-box"></span><br>
+    <strong>Address:</strong> <span class="input-box" style="width: 400px;"></span>
+  </div>
 
-  <table>
-    <tr>
-      <td>Customer Name :</td><td colspan="2"></td>
-      <td>Brand :</td><td></td>
-    </tr>
-    <tr>
-      <td>Address :</td><td colspan="2"></td>
-      <td>Model :</td><td></td>
-    </tr>
-    <tr>
-      <td>Tel :</td><td></td>
-      <td>Fax :</td><td>Rating :</td><td></td>
-    </tr>
-    <tr>
-      <td>Serial No. :</td><td></td>
-      <td>Unit No. :</td><td colspan="2"></td>
-    </tr>
-  </table>
+  <div class="section">
+    <h3>Safety Checklist</h3>
+    <label class="checkbox-round"><input type="checkbox"> Use of PPE</label><br>
+    <label class="checkbox-round"><input type="checkbox"> Identify & assess the risks in the workplace</label><br>
+    <label class="checkbox-round"><input type="checkbox"> I certify that the above checks have been carried out</label>
+  </div>
 
-  <div class="section-title">Safety checklist</div>
-  <table>
-    <tr><td><span class="checkbox"></span>(1) Use of Personal Protective Equipment (PPE)</td></tr>
-    <tr><td><span class="checkbox"></span>(2) Identify & assess the risks in the workplace</td></tr>
-    <tr><td colspan="1">I certify that the above checks has been carried out before commencing work</td><td>Signature</td></tr>
-  </table>
+  <div class="section">
+    <h3>UPS Status</h3>
+    <table>
+      <tr>
+        <th>Item</th>
+        <th>Normal</th>
+        <th>Abnormal</th>
+      </tr>
+      <tr>
+        <td>Input Voltage</td>
+        <td class="checkbox-round"><input type="checkbox"></td>
+        <td class="checkbox-round"><input type="checkbox"></td>
+      </tr>
+      <tr>
+        <td>Input Current</td>
+        <td class="checkbox-round"><input type="checkbox"></td>
+        <td class="checkbox-round"><input type="checkbox"></td>
+      </tr>
+      <tr>
+        <td>Output Voltage</td>
+        <td class="checkbox-round"><input type="checkbox"></td>
+        <td class="checkbox-round"><input type="checkbox"></td>
+      </tr>
+      <tr>
+        <td>Output Current</td>
+        <td class="checkbox-round"><input type="checkbox"></td>
+        <td class="checkbox-round"><input type="checkbox"></td>
+      </tr>
+      <tr>
+        <td>Percent Load</td>
+        <td class="checkbox-round"><input type="checkbox"></td>
+        <td class="checkbox-round"><input type="checkbox"></td>
+      </tr>
+      <tr>
+        <td>Output Frequency</td>
+        <td class="checkbox-round"><input type="checkbox"></td>
+        <td class="checkbox-round"><input type="checkbox"></td>
+      </tr>
+    </table>
+  </div>
 
-  <table>
-    <tr><td colspan="2">UPS Status</td><td><span class="checkbox"></span> Normal <span class="checkbox"></span> Abnormal</td></tr>
-    <tr><td rowspan="2">Input Section</td><td>Input Voltage</td><td><span class="checkbox"></span> Normal <span class="checkbox"></span> Abnormal</td></tr>
-    <tr><td>Input Current</td><td><span class="checkbox"></span> Normal <span class="checkbox"></span> Abnormal</td></tr>
-  </table>
+  <div class="section">
+    <h3>Battery Section</h3>
+    <strong>Battery Brand:</strong> <span class="input-box"></span> &nbsp;&nbsp;
+    <strong>Model:</strong> <span class="input-box"></span><br>
+    <strong>Quantity/String:</strong> <span class="input-box"></span> &nbsp;&nbsp;
+    <strong>Installed Date:</strong> <span class="input-box"></span><br>
+    <strong>Charging Mode:</strong>
+    <label class="checkbox-round"><input type="checkbox"> Float</label>
+    <label class="checkbox-round"><input type="checkbox"> Boost</label><br>
+    <strong>Charger Voltage:</strong> <span class="input-box"></span> VDC
+    <label class="checkbox-round"><input type="checkbox"> Normal</label>
+    <label class="checkbox-round"><input type="checkbox"> Abnormal</label><br>
+    <strong>Battery Voltage:</strong> <span class="input-box"></span> VDC
+    <label class="checkbox-round"><input type="checkbox"> Normal</label>
+    <label class="checkbox-round"><input type="checkbox"> Abnormal</label><br>
+    <strong>Battery Room Temp:</strong> <span class="input-box"></span> °C
+    <label class="checkbox-round"><input type="checkbox"> Normal</label>
+    <label class="checkbox-round"><input type="checkbox"> Abnormal</label>
+  </div>
 
-  <table>
-    <tr><td rowspan="4">Output Section</td><td>Output Voltage</td><td><span class="checkbox"></span> Normal <span class="checkbox"></span> Abnormal</td></tr>
-    <tr><td>Output Current</td><td><span class="checkbox"></span> Normal <span class="checkbox"></span> Abnormal</td></tr>
-    <tr><td>Percent Load</td><td><span class="checkbox"></span> Normal <span class="checkbox"></span> Abnormal</td></tr>
-    <tr><td>Output Frequency</td><td><span class="checkbox"></span> Normal <span class="checkbox"></span> Abnormal</td></tr>
-  </table>
+  <div class="section">
+    <h3>Back-Up Test</h3>
+    <strong>Back Up Time:</strong> <span class="input-box"></span> minutes<br>
+    <strong>Volt (DC) 1:</strong> <span class="input-box"></span> &nbsp;&nbsp;
+    <strong>Volt (DC) 2:</strong> <span class="input-box"></span><br>
+    <label class="checkbox-round"><input type="checkbox"> Normal</label>
+    <label class="checkbox-round"><input type="checkbox"> Abnormal</label>
+  </div>
 
-  <div class="section-title">Battery Section</div>
-  <table>
-    <tr><td>Battery Brand :</td><td></td><td>Model :</td><td></td></tr>
-    <tr><td>Battery :</td><td>Volt ____ Ah ____</td><td>No. String:</td><td></td></tr>
-    <tr><td>Quantity/String :</td><td>_____ Blocks</td><td>Installed Date :</td><td></td></tr>
-    <tr><td>Charging Mode at time of readings</td><td colspan="3"><span class="checkbox"></span> Float <span class="checkbox"></span> Boost</td></tr>
-    <tr><td>Charger Voltage :</td><td>____ VDC</td><td><span class="checkbox"></span> Normal <span class="checkbox"></span> Abnormal</td><td></td></tr>
-    <tr><td>Battery Voltage :</td><td>____ VDC</td><td><span class="checkbox"></span> Normal <span class="checkbox"></span> Abnormal</td><td></td></tr>
-    <tr><td>Battery Room Temp :</td><td>____ Deg.C</td><td><span class="checkbox"></span> Normal <span class="checkbox"></span> Abnormal</td><td></td></tr>
-  </table>
+  <div class="section">
+    <h3>Environmental Condition</h3>
+    <label class="checkbox-round"><input type="checkbox"> Ventilation for UPS: Normal</label>
+    <label class="checkbox-round"><input type="checkbox"> Abnormal</label><br>
+    <label class="checkbox-round"><input type="checkbox"> Air Condition</label>
+    <label class="checkbox-round"><input type="checkbox"> Dusty</label>
+    <label class="checkbox-round"><input type="checkbox"> Humid</label><br>
+    <strong>Ambient Temp:</strong> <span class="input-box"></span> °C
+    <label class="checkbox-round"><input type="checkbox"> Normal</label>
+    <label class="checkbox-round"><input type="checkbox"> Abnormal</label><br>
+    <strong>UPS Temp:</strong> <span class="input-box"></span> °C
+    <label class="checkbox-round"><input type="checkbox"> Normal</label>
+    <label class="checkbox-round"><input type="checkbox"> Abnormal</label>
+  </div>
 
-  <div class="section-title">Back Up Time</div>
-  <table>
-    <tr><td>Time (mn)</td><td>Volt (DC) 1</td><td>Volt (DC) 2</td></tr>
-  </table>
+  <div class="section">
+    <h3>Comment:</h3>
+    <div style="border: 1px solid #000; height: 60px;"></div>
+  </div>
 
-  <table>
-    <tr><td>Back Up Test :</td><td><span class="checkbox"></span> Normal <span class="checkbox"></span> Abnormal</td></tr>
-  </table>
-
-  <div class="section-title">Environmental Section</div>
-  <table>
-    <tr><td>Environment Condition</td><td colspan="3"><span class="checkbox"></span> Air Condition <span class="checkbox"></span> Ventilation <span class="checkbox"></span> Dusty <span class="checkbox"></span> Humid</td></tr>
-    <tr><td>Ventilation for UPS :</td><td colspan="3"><span class="checkbox"></span> Normal <span class="checkbox"></span> Abnormal</td></tr>
-    <tr><td>UPS Temp :</td><td>Deg. C</td><td colspan="2"><span class="checkbox"></span> Normal <span class="checkbox"></span> Abnormal</td></tr>
-    <tr><td>Ambient :</td><td>Deg. C</td><td colspan="2"><span class="checkbox"></span> Normal <span class="checkbox"></span> Abnormal</td></tr>
-  </table>
-
-  <div class="section-title">Comment</div>
-  <div class="comment-box"></div>
-
-  <p class="small">I hereby acknowledged that the services provided above has been satisfactorily completed.</p>
-
-  <table class="no-border">
-    <tr>
-      <td class="signature">Engineer<br><br>____________________</td>
-      <td class="signature">Customer Acknowledgment<br><br>____________________</td>
-    </tr>
-  </table>
+  <div class="signature">
+    <div>
+      <strong>Engineer Signature:</strong><br><br>
+      ___________________________
+    </div>
+    <div>
+      <strong>Customer Acknowledgment:</strong><br><br>
+      ___________________________
+    </div>
+  </div>
 
 </body>
 </html>
