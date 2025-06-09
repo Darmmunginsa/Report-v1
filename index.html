@@ -2,158 +2,148 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8">
-  <title>UPS Preventive Maintenance Report</title>
+  <title>Dongroups PM Report</title>
   <style>
-    @media print {
-      body {
-        width: 210mm;
-        height: 297mm;
-        margin: 0 auto;
-        font-family: 'Segoe UI', sans-serif;
-        color: #2c3e50;
-        background: white;
-      }
+    @page {
+      size: A4;
+      margin: 20mm;
     }
-
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: #f7f9fc;
+      font-size: 13px;
+      color: #2c3e50;
+      background: white;
+      margin: 0;
       padding: 20mm;
-      margin: 0 auto;
       box-sizing: border-box;
-      max-width: 210mm;
+      width: 210mm;
+      height: 297mm;
     }
-
-    header {
+    h1 {
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .header {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 10px;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
-
-    .logo {
-      width: 120px;
-      height: auto;
+    .logo-box, .address-box {
+      width: 45%;
     }
-
-    .company-address {
-      text-align: right;
-      font-size: 14px;
-      line-height: 1.4;
-    }
-
-    h1 {
-      font-size: 20px;
-      margin-top: 0;
-      text-align: center;
-      color: #34495e;
-    }
-
     table {
       width: 100%;
       border-collapse: collapse;
-      margin: 10px 0 25px 0;
-      font-size: 14px;
+      margin: 8px 0;
     }
-
-    table td, table th {
-      border: 1px solid #ddd;
-      padding: 6px 10px;
+    td, th {
+      border: 1px solid #ccc;
+      padding: 6px;
+      vertical-align: top;
     }
-
-    table th {
-      background-color: #ecf0f1;
-      font-weight: 600;
-      text-align: left;
-    }
-
     .section-title {
-      font-size: 16px;
       font-weight: bold;
-      margin-top: 30px;
-      border-bottom: 1px solid #bbb;
-      padding-bottom: 4px;
-      color: #2c3e50;
+      margin-top: 12px;
+      font-size: 14px;
+      border-bottom: 1px solid #888;
+      padding-bottom: 2px;
     }
-
-    .signature {
-      margin-top: 30px;
+    .no-border td {
+      border: none;
+      padding: 4px 0;
+    }
+    .flex-row {
       display: flex;
       justify-content: space-between;
-      font-size: 14px;
+      margin-top: 20px;
     }
-
-    .signature div {
+    .sign-box {
       width: 45%;
+      text-align: center;
     }
-
     .comment-box {
       border: 1px solid #ccc;
-      padding: 10px;
-      min-height: 60px;
+      height: 60px;
       margin-top: 10px;
-      background-color: #fff;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <img src="your-logo.png" alt="Logo" class="logo">
-    <div class="company-address">
-      <strong>Company Name</strong><br>
-      ใส่ที่อยู่บริษัทตรงนี้<br>
-      โทรศัพท์ / โทรสาร / อีเมล
+  <div class="header">
+    <div class="logo-box">
+      <!-- ใส่โลโก้ที่นี่ -->
+      <strong>Company Logo</strong>
     </div>
-  </header>
+    <div class="address-box" style="text-align:right">
+      <!-- ใส่ที่อยู่บริษัทที่นี่ -->
+      <strong>Company Name</strong><br>
+      Company Address Line 1<br>
+      Company Address Line 2
+    </div>
+  </div>
 
-  <h1>UPS Preventive Maintenance Report</h1>
+  <h1>UPS Preventive Maintenance Form</h1>
+
+  <table class="no-border">
+    <tr>
+      <td style="width: 15%;">No.</td>
+      <td style="width: 35%;"></td>
+      <td style="width: 10%;">Date</td>
+      <td style="width: 40%;"></td>
+    </tr>
+    <tr>
+      <td>Time</td>
+      <td></td>
+      <td>To</td>
+      <td></td>
+    </tr>
+  </table>
 
   <table>
+    <tr><th colspan="4">Customer Information</th></tr>
     <tr>
-      <th>No.</th><td></td>
-      <th>Date</th><td></td>
-      <th>Time</th><td colspan="2">To:</td>
+      <td>Customer Name</td><td></td>
+      <td>Brand</td><td></td>
     </tr>
     <tr>
-      <th>Customer Name</th><td></td>
-      <th>Brand</th><td></td>
-      <th>Model</th><td colspan="2"></td>
+      <td>Model</td><td></td>
+      <td>Serial No.</td><td></td>
     </tr>
     <tr>
-      <th>Serial No.</th><td></td>
-      <th>Unit No.</th><td></td>
-      <th>Rating</th><td colspan="2"></td>
+      <td>Tel</td><td></td>
+      <td>Fax</td><td></td>
     </tr>
     <tr>
-      <th>Tel</th><td></td>
-      <th>Fax</th><td></td>
-      <th>Address</th><td colspan="2"></td>
+      <td>Unit No.</td><td></td>
+      <td>Rating</td><td></td>
+    </tr>
+    <tr>
+      <td>Address</td><td colspan="3"></td>
     </tr>
   </table>
 
   <div class="section-title">1. Safety Checklist</div>
   <table>
-    <tr><th>(1)</th><td>Use of Personal Protective Equipment (PPE)</td></tr>
-    <tr><th>(2)</th><td>Identify & assess the risks in the workplace</td></tr>
+    <tr><td>(1)</td><td>Use of Personal Protective Equipment (PPE)</td></tr>
+    <tr><td>(2)</td><td>Identify & assess risks in the workplace</td></tr>
+    <tr><td colspan="2">I certify that the above checks have been carried out before commencing work</td></tr>
   </table>
 
   <div class="section-title">2. Input Section</div>
   <table>
-    <tr><th>Item</th><th>R</th><th>S</th><th>T</th><th>Status</th></tr>
-    <tr><td>UPS Status</td><td></td><td></td><td></td><td>Normal / Abnormal</td></tr>
-    <tr><td>Input Voltage</td><td></td><td></td><td></td><td>Normal / Abnormal</td></tr>
-    <tr><td>Input Current</td><td></td><td></td><td></td><td>Normal / Abnormal</td></tr>
+    <tr><td>UPS Status</td><td>Normal</td><td>Abnormal</td></tr>
+    <tr><td>Input Voltage</td><td>Normal</td><td>Abnormal</td></tr>
+    <tr><td>Input Current</td><td>Normal</td><td>Abnormal</td></tr>
   </table>
 
   <div class="section-title">3. Output Section</div>
   <table>
-    <tr><td>Output Voltage</td><td>Normal / Abnormal</td></tr>
-    <tr><td>Output Current</td><td>Normal / Abnormal</td></tr>
-    <tr><td>Percent Load</td><td>Normal / Abnormal</td></tr>
-    <tr><td>Output Frequency</td><td>Normal / Abnormal</td></tr>
+    <tr><td>Output Voltage</td><td>Normal</td><td>Abnormal</td></tr>
+    <tr><td>Output Current</td><td>Normal</td><td>Abnormal</td></tr>
+    <tr><td>Percent Load</td><td>Normal</td><td>Abnormal</td></tr>
+    <tr><td>Output Frequency</td><td>Normal</td><td>Abnormal</td></tr>
   </table>
 
   <div class="section-title">4. Battery Section</div>
@@ -162,8 +152,8 @@
     <tr><td>Model</td><td></td></tr>
     <tr><td>Quantity/String</td><td></td></tr>
     <tr><td>Blocks Installed Date</td><td></td></tr>
-    <tr><td>Battery Volt/Ah</td><td></td></tr>
-    <tr><td>No. of Strings</td><td></td></tr>
+    <tr><td>Volt / Ah</td><td></td></tr>
+    <tr><td>No. of String</td><td></td></tr>
     <tr><td>Charging Mode</td><td>Float / Boost</td></tr>
     <tr><td>Charger Voltage</td><td>Normal / Abnormal</td></tr>
     <tr><td>Battery Voltage</td><td>Normal / Abnormal</td></tr>
@@ -172,9 +162,9 @@
 
   <div class="section-title">5. Backup Test</div>
   <table>
-    <tr><td>Back Up Time (mn)</td><td></td></tr>
-    <tr><td>Volt (DC) 1</td><td></td></tr>
-    <tr><td>Volt (DC) 2</td><td></td></tr>
+    <tr><td>Back Up Time (min)</td><td></td></tr>
+    <tr><td>Volt DC 1</td><td></td></tr>
+    <tr><td>Volt DC 2</td><td></td></tr>
     <tr><td>Back Up Test</td><td>Normal / Abnormal</td></tr>
   </table>
 
@@ -189,13 +179,15 @@
   <div class="section-title">7. Comment</div>
   <div class="comment-box"></div>
 
-  <div class="signature">
-    <div>
-      <strong>Engineer</strong><br><br><br>
+  <div class="flex-row">
+    <div class="sign-box">
+      <p><strong>Engineer</strong></p>
+      <br><br>
       ____________________________
     </div>
-    <div>
-      <strong>Customer Acknowledgment</strong><br><br><br>
+    <div class="sign-box">
+      <p><strong>Customer Acknowledgment</strong></p>
+      <br><br>
       ____________________________
     </div>
   </div>
