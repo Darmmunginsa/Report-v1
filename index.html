@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>UPS Preventive Maintenance Report</title>
+  <style>
+    @media print {
+      body {
+        width: 210mm;
+        height: 297mm;
+        margin: 0 auto;
+        font-family: 'Segoe UI', sans-serif;
+        color: #2c3e50;
+        background: white;
+      }
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f7f9fc;
+      padding: 20mm;
+      margin: 0 auto;
+      box-sizing: border-box;
+      max-width: 210mm;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    .logo {
+      width: 120px;
+      height: auto;
+    }
+
+    .company-address {
+      text-align: right;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    h1 {
+      font-size: 20px;
+      margin-top: 0;
+      text-align: center;
+      color: #34495e;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0 25px 0;
+      font-size: 14px;
+    }
+
+    table td, table th {
+      border: 1px solid #ddd;
+      padding: 6px 10px;
+    }
+
+    table th {
+      background-color: #ecf0f1;
+      font-weight: 600;
+      text-align: left;
+    }
+
+    .section-title {
+      font-size: 16px;
+      font-weight: bold;
+      margin-top: 30px;
+      border-bottom: 1px solid #bbb;
+      padding-bottom: 4px;
+      color: #2c3e50;
+    }
+
+    .signature {
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+    }
+
+    .signature div {
+      width: 45%;
+    }
+
+    .comment-box {
+      border: 1px solid #ccc;
+      padding: 10px;
+      min-height: 60px;
+      margin-top: 10px;
+      background-color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="your-logo.png" alt="Logo" class="logo">
+    <div class="company-address">
+      <strong>Company Name</strong><br>
+      ใส่ที่อยู่บริษัทตรงนี้<br>
+      โทรศัพท์ / โทรสาร / อีเมล
+    </div>
+  </header>
+
+  <h1>UPS Preventive Maintenance Report</h1>
+
+  <table>
+    <tr>
+      <th>No.</th><td></td>
+      <th>Date</th><td></td>
+      <th>Time</th><td colspan="2">To:</td>
+    </tr>
+    <tr>
+      <th>Customer Name</th><td></td>
+      <th>Brand</th><td></td>
+      <th>Model</th><td colspan="2"></td>
+    </tr>
+    <tr>
+      <th>Serial No.</th><td></td>
+      <th>Unit No.</th><td></td>
+      <th>Rating</th><td colspan="2"></td>
+    </tr>
+    <tr>
+      <th>Tel</th><td></td>
+      <th>Fax</th><td></td>
+      <th>Address</th><td colspan="2"></td>
+    </tr>
+  </table>
+
+  <div class="section-title">1. Safety Checklist</div>
+  <table>
+    <tr><th>(1)</th><td>Use of Personal Protective Equipment (PPE)</td></tr>
+    <tr><th>(2)</th><td>Identify & assess the risks in the workplace</td></tr>
+  </table>
+
+  <div class="section-title">2. Input Section</div>
+  <table>
+    <tr><th>Item</th><th>R</th><th>S</th><th>T</th><th>Status</th></tr>
+    <tr><td>UPS Status</td><td></td><td></td><td></td><td>Normal / Abnormal</td></tr>
+    <tr><td>Input Voltage</td><td></td><td></td><td></td><td>Normal / Abnormal</td></tr>
+    <tr><td>Input Current</td><td></td><td></td><td></td><td>Normal / Abnormal</td></tr>
+  </table>
+
+  <div class="section-title">3. Output Section</div>
+  <table>
+    <tr><td>Output Voltage</td><td>Normal / Abnormal</td></tr>
+    <tr><td>Output Current</td><td>Normal / Abnormal</td></tr>
+    <tr><td>Percent Load</td><td>Normal / Abnormal</td></tr>
+    <tr><td>Output Frequency</td><td>Normal / Abnormal</td></tr>
+  </table>
+
+  <div class="section-title">4. Battery Section</div>
+  <table>
+    <tr><td>Battery Brand</td><td></td></tr>
+    <tr><td>Model</td><td></td></tr>
+    <tr><td>Quantity/String</td><td></td></tr>
+    <tr><td>Blocks Installed Date</td><td></td></tr>
+    <tr><td>Battery Volt/Ah</td><td></td></tr>
+    <tr><td>No. of Strings</td><td></td></tr>
+    <tr><td>Charging Mode</td><td>Float / Boost</td></tr>
+    <tr><td>Charger Voltage</td><td>Normal / Abnormal</td></tr>
+    <tr><td>Battery Voltage</td><td>Normal / Abnormal</td></tr>
+    <tr><td>Battery Room Temp</td><td>Normal / Abnormal</td></tr>
+  </table>
+
+  <div class="section-title">5. Backup Test</div>
+  <table>
+    <tr><td>Back Up Time (mn)</td><td></td></tr>
+    <tr><td>Volt (DC) 1</td><td></td></tr>
+    <tr><td>Volt (DC) 2</td><td></td></tr>
+    <tr><td>Back Up Test</td><td>Normal / Abnormal</td></tr>
+  </table>
+
+  <div class="section-title">6. Environment Condition</div>
+  <table>
+    <tr><td>Ventilation for UPS</td><td>Normal / Abnormal</td></tr>
+    <tr><td>Air Condition</td><td>Dusty / Humid</td></tr>
+    <tr><td>Ambient Temp</td><td>Normal / Abnormal</td></tr>
+    <tr><td>UPS Temp</td><td>Normal / Abnormal</td></tr>
+  </table>
+
+  <div class="section-title">7. Comment</div>
+  <div class="comment-box"></div>
+
+  <div class="signature">
+    <div>
+      <strong>Engineer</strong><br><br><br>
+      ____________________________
+    </div>
+    <div>
+      <strong>Customer Acknowledgment</strong><br><br><br>
+      ____________________________
+    </div>
+  </div>
+
+</body>
+</html>
